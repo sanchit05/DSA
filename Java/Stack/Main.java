@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
-
+import Stack.StcockSpanProblem;
 public class Main {
     //input: [1,3,2,4,8]
     //output: [3,4,4,8,-1]
@@ -118,11 +118,17 @@ public class Main {
         System.out.println(result);
     }
 
+    public static void stockSpanProblem(int[] arr){
+
+    }
+
     public static void main(String[] args) {
-        findNGR(new int[]{1,3,2,4,8});
-        findNGL(new int[]{1,3,2,4,8});
-        findNSR(new int[]{1,3,2,4,8});
-        findNSL(new int[]{1,3,2,4,8});
+        int[] arr = new int[]{100,80,60,70,60,75,85}; 
+        // findNGR(arr);
+        // findNGL(arr);
+        // findNSR(arr);
+        // findNSL(arr);
+        new StcockSpanProblem(arr);
         
     }
 }

@@ -1,6 +1,9 @@
-class NGR {
+public class NGR {
     //input: [1,3,2,4,8]
     //output: [3,4,4,8,-1]
+    NGR(){
+        
+    }
     public static List<Integer> findNGR(int[] arr){
         List<Integer> result = new ArrayList<>();
         Stack<Integer> s = new Stack<>();
