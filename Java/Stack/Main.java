@@ -8,7 +8,7 @@ import java.util.Stack;
 public class Main {
     //input: [1,3,2,4,8]
     //output: [3,4,4,8,-1]
-    public static List<Integer> findNGR(int[] arr){
+    public static void findNGR(int[] arr){
         
         List<Integer> result = new ArrayList<>();
         Stack<Integer> s = new Stack<>();
@@ -32,7 +32,6 @@ public class Main {
         }
         Collections.reverse(result);
         System.out.println(result);
-        return result;
     }
 
     public static void findNGL(int[] arr){
@@ -124,8 +123,6 @@ public class Main {
         findNGL(new int[]{1,3,2,4,8});
         findNSR(new int[]{1,3,2,4,8});
         findNSL(new int[]{1,3,2,4,8});
-
-        // NGR ngr = new NGR();
         
     }
 }
