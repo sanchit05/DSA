@@ -7,7 +7,7 @@ import Helper.Pair;
 
 public class StcockSpanProblem {
 
-    public StcockSpanProblem(int[] arr){
+    StcockSpanProblem(int[] arr){
         int n = arr.length;
         List<Integer> result = new ArrayList<>();
         Stack<Pair> s = new Stack<>();
