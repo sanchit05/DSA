@@ -26,7 +26,7 @@ public class MaximumAreaHistogram {
      * _|_|_|_|_|_|_|_|_
      *   0 1 2 3 4 5 6
      */
-    MaximumAreaHistogram(int[] arr){
+    public int maximumAreaHistogram(int[] arr){
 
         //find nearest smaller to left
         
@@ -39,7 +39,7 @@ public class MaximumAreaHistogram {
             }else if(!s.isEmpty() && s.peek().first < arr[i]){
                 nsl.add(s.peek().second);
             }else{
-                while(!s.isEmpty() && s.peek().first > arr[i]){
+                while(!s.isEmpty() && s.peek().first >= arr[i]){
                     s.pop();
                 }
 
@@ -69,7 +69,7 @@ public class MaximumAreaHistogram {
             }else if(!s.isEmpty() && s.peek().first < arr[i]){
                 nsr.add(s.peek().second);
             }else{
-                while(!s.isEmpty() && s.peek().first > arr[i]){
+                while(!s.isEmpty() && s.peek().first >= arr[i]){
                     s.pop();
                 }
                 if(!s.isEmpty()){
@@ -85,13 +85,35 @@ public class MaximumAreaHistogram {
         //find width 
         // && Maximum area array
         int MAX = Integer.MIN_VALUE;
+
         // List<Integer> width = new ArrayList<>();
+        // for(int i= 0 ;i<n;i++){
+        //     width.add(nsr.get(i) - nsl.get(i) );
+        // }
+        // System.out.println("NSR: ");
+        // for (Integer i : nsr) {
+        //     System.out.print(i+", ");
+        // }
+        // System.out.println();
+        // System.out.println("NSL: ");
+        //  for (Integer i : nsl) {
+        //     System.out.print(i+", ");
+        // }
+        // System.out.println();
+        // System.out.println("Width: ");
+        // for (Integer i : width) {
+        //     System.out.print(i+", ");
+        // }
+        // System.out.println();
+        
         for(int i=0;i<n;i++){
              MAX = Math.max(MAX, arr[i] * Math.abs(nsr.get(i) - nsl.get(i) - 1));
         }
 
         // print maximum area hostogram
-        System.out.println("Maximum area Histogram is : "+MAX);
+        // System.out.println("Maximum area Histogram is : "+MAX);
+
+        return MAX;
 
         
 

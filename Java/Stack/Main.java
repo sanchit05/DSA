@@ -119,13 +119,16 @@ public class Main {
 
     public static void main(String[] args) {
         // int[] arr = new int[]{100,80,60,70,60,75,85}; 
-        int[] arr = new int[]{6,2,5,4,5,1,6};
+        // int[] newarr = new int[]{2,3,3,2};
+        int[][] arr = new int[][]{{0,1,1,0},{1,1,1,1},{1,1,1,1},{1,1,0,0}};
         // findNGR(arr);
         // findNGL(arr);
         // findNSR(arr);
         // findNSL(arr);
         // new StcockSpanProblem(arr);
-        new MaximumAreaHistogram(arr);
+        // new MaximumAreaHistogram().maximumAreaHistogram(newarr);
+        int result = new MaxAreaRectInBinaryMatrix().maxAreaRectInBinaryMatrix(arr);
+        System.out.println(result);
         
     }
 }
